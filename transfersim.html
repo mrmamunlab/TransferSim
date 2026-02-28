@@ -15,16 +15,15 @@
         }
 
         body {
-            background: #f0f5f0;  /* light neutral with greenish tint */
+            background: #f0f5f0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             min-height: 100vh;
-            padding: 16px 12px;
+            padding: 12px 10px;
         }
 
-        /* main container */
         .site-container {
             max-width: 500px;
             width: 100%;
@@ -35,10 +34,10 @@
             border: 1px solid #d0e0d0;
         }
 
-        /* header – dark green */
+        /* header – dark green, più compatto */
         .header-nav {
-            background: #1B5E2A;  /* deep forest green */
-            padding: 18px 24px;
+            background: #1B5E2A;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -46,31 +45,34 @@
         }
         .logo {
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             letter-spacing: -0.3px;
             display: flex;
             align-items: center;
             gap: 6px;
         }
         .logo span {
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             background: rgba(255,255,255,0.2);
-            padding: 4px 10px;
+            padding: 2px 8px;
             border-radius: 40px;
             font-weight: 500;
         }
         .nav-icons {
             display: flex;
-            gap: 16px;
+            gap: 8px;
         }
         .nav-icons span {
             cursor: pointer;
             opacity: 0.9;
             transition: 0.15s;
-            padding: 8px 14px;
+            padding: 6px 12px;
             border-radius: 40px;
             background: rgba(255,255,255,0.15);
-            font-size: 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
         .nav-icons span.active {
             background: white;
@@ -79,38 +81,33 @@
             font-weight: 500;
         }
 
-        /* pages */
         .page {
-            padding: 24px 20px 30px;
+            padding: 20px 16px 24px;
             background: white;
         }
         .page.hide {
             display: none;
         }
 
-        /* step cards */
         .step-card {
             background: #f8fbf8;
             border-radius: 20px;
-            padding: 16px 18px;
-            margin-bottom: 16px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
             border: 1px solid #c8ddc8;
-            box-shadow: 0 4px 8px -4px rgba(0,30,0,0.02);
         }
         .step-title {
             font-weight: 600;
             color: #1B5E2A;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            letter-spacing: 0.2px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
         }
 
-        /* selects & inputs */
         .select-fresh {
             background: white;
             border: 1.5px solid #c8ddc8;
             border-radius: 60px;
-            padding: 14px 22px;
+            padding: 12px 20px;
             font-size: 1rem;
             font-weight: 500;
             color: #1a3b1a;
@@ -118,10 +115,9 @@
             appearance: none;
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%231B5E2A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>');
             background-repeat: no-repeat;
-            background-position: right 18px center;
+            background-position: right 16px center;
             background-size: 16px;
             outline: none;
-            transition: border 0.15s;
         }
         .select-fresh:focus {
             border-color: #1B5E2A;
@@ -132,19 +128,18 @@
             background: white;
             border: 1.5px solid #c8ddc8;
             border-radius: 60px;
-            padding: 4px 4px 4px 20px;
+            padding: 4px 4px 4px 16px;
             align-items: center;
-            transition: border 0.15s;
         }
         .amount-wrap:focus-within {
             border-color: #1B5E2A;
         }
         .amount-wrap input {
             border: none;
-            padding: 14px 0;
+            padding: 12px 0;
             font-size: 1.1rem;
             font-weight: 600;
-            width: 120px;
+            width: 110px;
             outline: none;
             background: transparent;
             color: #1a3b1a;
@@ -152,10 +147,10 @@
         .currency-badge {
             background: #e8f3e8;
             color: #1B5E2A;
-            padding: 10px 24px;
+            padding: 8px 20px;
             border-radius: 60px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-left: auto;
             border: 1px solid #b8d9b8;
         }
@@ -164,55 +159,47 @@
             background: #1B5E2A;
             border: none;
             border-radius: 60px;
-            padding: 16px 24px;
+            padding: 14px 20px;
             font-size: 1.1rem;
             font-weight: 600;
             color: white;
             width: 100%;
             cursor: pointer;
-            transition: background 0.15s, transform 0.1s;
+            transition: background 0.15s;
             box-shadow: 0 4px 10px -4px #1B5E2A80;
-            margin: 10px 0;
-        }
-        .btn-primary:hover {
-            background: #0F4A1F;
-        }
-        .btn-primary:active {
-            transform: scale(0.98);
+            margin: 8px 0;
         }
         .btn-primary.small {
-            padding: 14px;
+            padding: 12px;
             font-size: 1rem;
         }
 
-        /* loading animation – progress bar with money theme */
+        /* loading area */
         .loading-area {
             background: #f0f8f0;
             border-radius: 30px;
-            padding: 30px 20px;
+            padding: 24px 16px;
             text-align: center;
-            margin: 20px 0;
+            margin: 16px 0;
             border: 1px dashed #9bc09b;
         }
         .transfer-loader {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
         }
         .loader-bar {
             width: 80%;
-            height: 12px;
+            height: 10px;
             background: #d0e6d0;
             border-radius: 20px;
             overflow: hidden;
-            position: relative;
         }
         .loader-fill {
             width: 0%;
             height: 100%;
             background: #1B5E2A;
-            border-radius: 20px;
             animation: fillProgress 1.8s ease-in-out infinite;
         }
         @keyframes fillProgress {
@@ -223,29 +210,28 @@
         .loader-text {
             color: #1B5E2A;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 8px;
-        }
-        .loader-text i {
-            font-size: 1.4rem;
+            gap: 6px;
         }
 
-        /* provider list items */
+        /* provider list items - CORRETTO per bottone Go */
         .provider-item {
             background: #ffffff;
             border-radius: 20px;
-            padding: 16px 18px;
+            padding: 14px 16px;
             margin-bottom: 12px;
             border: 1px solid #c8ddc8;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap; /* permette al bottone di andare sotto se necessario */
             box-shadow: 0 4px 10px -6px rgba(0,30,0,0.1);
             transition: box-shadow 0.2s, border-color 0.2s;
+            position: relative;
         }
-        /* best provider highlight with green glow */
         .provider-item.best-provider {
             border: 2px solid #1B5E2A;
             box-shadow: 0 8px 20px -8px #1B5E2A, 0 0 0 2px rgba(27,94,42,0.2);
@@ -253,6 +239,7 @@
         }
         .provider-info {
             flex: 2;
+            min-width: 200px; /* evita che si restringa troppo */
         }
         .provider-name {
             font-weight: 700;
@@ -262,17 +249,26 @@
             gap: 8px;
             margin-bottom: 6px;
             font-size: 1rem;
+            flex-wrap: wrap;
         }
         .provider-icon {
             width: 32px;
             height: 32px;
+            border-radius: 50%;
             background: #e8f3e8;
-            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #1B5E2A;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .provider-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .provider-details {
             display: flex;
@@ -283,8 +279,18 @@
         }
         .provider-details span {
             background: #f0f8f0;
-            padding: 4px 12px;
+            padding: 4px 10px;
             border-radius: 40px;
+        }
+        .offer-badge {
+            background: #FFD700;
+            color: #1a3b1a;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 60px;
+            margin-left: 6px;
+            white-space: nowrap;
         }
         .best-badge {
             background: #1B5E2A;
@@ -294,57 +300,55 @@
             padding: 3px 8px;
             border-radius: 60px;
             margin-left: 6px;
-            letter-spacing: 0.2px;
         }
-        .green-button {
+        .green-button.small {
             background: #1B5E2A;
             color: white;
-            padding: 12px 18px;
+            padding: 8px 12px;
             border-radius: 60px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            transition: background 0.15s;
+            gap: 4px;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 10px -6px #0F4A1F;
+            white-space: nowrap;
+            flex-shrink: 0; /* impedisce che si restringa troppo */
         }
-        .green-button:hover {
-            background: #0F4A1F;
-        }
-        .green-button.small {
-            padding: 8px 14px;
-            font-size: 0.8rem;
+
+        /* Per schermi molto piccoli, riduci ulteriormente il padding del bottone */
+        @media (max-width: 380px) {
+            .green-button.small {
+                padding: 6px 10px;
+                font-size: 0.7rem;
+            }
+            .provider-info {
+                min-width: 160px;
+            }
         }
 
         /* points grid */
         .points-grid {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            margin: 20px 0;
+            gap: 12px;
+            margin: 16px 0;
         }
         .point-card {
             background: #ffffff;
             border: 1px solid #c8ddc8;
             border-radius: 20px;
-            padding: 16px;
+            padding: 14px;
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 14px;
             cursor: pointer;
-            transition: box-shadow 0.15s;
-            box-shadow: 0 4px 8px -6px rgba(0,30,0,0.1);
-        }
-        .point-card:hover {
-            box-shadow: 0 8px 16px -10px #1B5E2A;
         }
         .point-img {
-            width: 64px;
-            height: 64px;
+            width: 60px;
+            height: 60px;
             background: #e8f3e8;
             border-radius: 18px;
             display: flex;
@@ -360,7 +364,7 @@
             font-size: 1rem;
         }
         .point-info p {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #2d5a2d;
         }
         .rating {
@@ -371,56 +375,51 @@
         /* detail page */
         .detail-image {
             width: 100%;
-            height: 170px;
+            height: 160px;
             background: #e8f3e8;
-            border-radius: 28px;
+            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
             color: #1B5E2A;
-            margin: 16px 0 20px;
+            margin: 12px 0 16px;
         }
         .info-row {
             background: #f8fbf8;
-            padding: 14px 18px;
+            padding: 12px 16px;
             border-radius: 20px;
-            margin: 12px 0;
+            margin: 10px 0;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             border: 1px solid #c8ddc8;
         }
         .offer-tag {
             background: #1B5E2A;
             color: white;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 60px;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
         .back-link {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             color: #1B5E2A;
             font-weight: 600;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             cursor: pointer;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .hide { display: none; }
-
-        /* rating stars */
-        .rating i {
-            color: #1B5E2A;
-        }
+        .rating i { color: #1B5E2A; }
     </style>
 </head>
 <body>
 <div class="site-container">
-    <!-- header with app name -->
     <div class="header-nav">
         <div class="logo"><i class="fas fa-arrow-right-arrow-left"></i> Transfer Sim <span>best rate</span></div>
         <div class="nav-icons">
@@ -456,29 +455,24 @@
 
         <button class="btn-primary" id="simulateBtn"><i class="fas fa-chart-line"></i> See best rate</button>
 
-        <!-- loading area (hidden initially) -->
         <div id="loadingArea" class="loading-area hide">
             <div class="transfer-loader">
-                <div class="loader-bar">
-                    <div class="loader-fill"></div>
-                </div>
-                <div class="loader-text">
-                    <i class="fas fa-arrow-trend-up"></i> calculating best transfer...
-                </div>
+                <div class="loader-bar"><div class="loader-fill"></div></div>
+                <div class="loader-text"><i class="fas fa-arrow-trend-up"></i> calculating best transfer...</div>
             </div>
         </div>
 
-        <div id="homeResults" style="margin-top: 18px;"></div>
+        <div id="homeResults" style="margin-top: 16px;"></div>
     </div>
 
     <!-- PAGE 2 – NEARBY POINTS -->
     <div id="pageMap" class="page hide">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;">
-            <h3 style="color:#1a3b1a;"><i class="fas fa-store"></i> Partner locations</h3>
-            <span id="mapBestProvider" style="background:#e8f3e8; padding:6px 16px; border-radius: 60px; font-size:0.85rem; border:1px solid #b8d9b8;">TapTap Send</span>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">
+            <h3 style="color:#1a3b1a; font-size:1.1rem;"><i class="fas fa-store"></i> Partner locations</h3>
+            <span id="mapBestProvider" style="background:#e8f3e8; padding:4px 12px; border-radius: 60px; font-size:0.8rem; border:1px solid #b8d9b8;">TapTap Send</span>
         </div>
         <div id="pointsContainer" class="points-grid"></div>
-        <div style="margin-top: 24px;">
+        <div style="margin-top: 20px;">
             <button class="btn-primary small" id="backToHomeFromMap"><i class="fas fa-arrow-left"></i> Back to simulator</button>
         </div>
     </div>
@@ -492,25 +486,25 @@
 
 <script>
     (function() {
-        // Provider data with icons
+        // Provider data con campi icon (URL o fa-) e offer
         const providers = [
-            { name: "TapTap Send", icon: "fa-hand-pointer",
+            { name: "TapTap Send", icon: "fa-hand-pointer", offer: "First transfer free",
               rates: { "EUR_BDT": 143.00, "GBP_BDT": 165.20, "USD_BDT": 131.50, "EUR_PKR": 305.0, "GBP_PKR": 352.0, "USD_PKR": 280.0 },
               fees:   { "EUR_BDT": 0,     "GBP_BDT": 1.5,    "USD_BDT": 1.2,    "EUR_PKR": 20,   "GBP_PKR": 25,   "USD_PKR": 18 },
               link: "https://www.taptapsend.com/" },
-            { name: "Wise", icon: "fa-building-columns",
+            { name: "Wise", icon: "fa-building-columns", offer: "0.5% cashback",
               rates: { "EUR_BDT": 142.85, "GBP_BDT": 164.5,  "USD_BDT": 130.8,  "EUR_PKR": 302.5, "GBP_PKR": 349.0, "USD_PKR": 277.5 },
               fees:   { "EUR_BDT": 2.4,    "GBP_BDT": 2.8,    "USD_BDT": 2.2,    "EUR_PKR": 30,   "GBP_PKR": 35,   "USD_PKR": 25 },
               link: "https://wise.com/" },
-            { name: "Remitly", icon: "fa-paper-plane",
+            { name: "Remitly", icon: "fa-paper-plane", offer: "No fee on first €100",
               rates: { "EUR_BDT": 143.10, "GBP_BDT": 165.5,  "USD_BDT": 131.8,  "EUR_PKR": 306.0, "GBP_PKR": 354.0, "USD_PKR": 281.5 },
               fees:   { "EUR_BDT": 1.9,    "GBP_BDT": 2.0,    "USD_BDT": 1.8,    "EUR_PKR": 22,   "GBP_PKR": 26,   "USD_PKR": 20 },
               link: "https://remitly.com/" },
-            { name: "Azimo", icon: "fa-globe",
+            { name: "Azimo", icon: "fa-globe", offer: "2€ bonus",
               rates: { "EUR_BDT": 142.40, "GBP_BDT": 164.0,  "USD_BDT": 130.2,  "EUR_PKR": 301.0, "GBP_PKR": 348.0, "USD_PKR": 276.0 },
               fees:   { "EUR_BDT": 2.0,    "GBP_BDT": 2.3,    "USD_BDT": 2.1,    "EUR_PKR": 28,   "GBP_PKR": 32,   "USD_PKR": 24 },
               link: "https://azimo.com/" },
-            { name: "Western Union", icon: "fa-building",
+            { name: "Western Union", icon: "fa-building", offer: "5% sconto",
               rates: { "EUR_BDT": 141.20, "GBP_BDT": 162.0,  "USD_BDT": 129.0,  "EUR_PKR": 298.0, "GBP_PKR": 344.0, "USD_PKR": 273.0 },
               fees:   { "EUR_BDT": 4.8,    "GBP_BDT": 5.0,    "USD_BDT": 4.5,    "EUR_PKR": 45,   "GBP_PKR": 48,   "USD_PKR": 40 },
               link: "https://westernunion.com/" }
@@ -550,11 +544,8 @@
         });
 
         simulateBtn.addEventListener('click', () => {
-            // Show loading, hide previous results
             homeResults.innerHTML = '';
             loadingArea.classList.remove('hide');
-
-            // Simulate network delay (2 seconds)
             setTimeout(() => {
                 loadingArea.classList.add('hide');
                 performCalculation();
@@ -582,17 +573,24 @@
             currentBestProviderName = best.name;
             mapBestProvider.innerText = currentBestProviderName;
 
-            let html = '<h4 style="color:#1a3b1a; margin:16px 0 12px;">📊 Compare providers</h4>';
+            let html = '<h4 style="color:#1a3b1a; margin:14px 0 10px;">📊 Compare providers</h4>';
             enriched.forEach(p => {
                 const isBest = p.name === best.name;
-                // add best-provider class to the best item
                 const bestClass = isBest ? 'best-provider' : '';
+                // Costruzione icona
+                let iconHtml = '';
+                if (p.icon.startsWith('fa-')) {
+                    iconHtml = `<i class="fas ${p.icon}"></i>`;
+                } else {
+                    iconHtml = `<img src="${p.icon}" alt="${p.name}">`;
+                }
                 html += `
                     <div class="provider-item ${bestClass}">
                         <div class="provider-info">
                             <div class="provider-name">
-                                <span class="provider-icon"><i class="fas ${p.icon}"></i></span>
+                                <span class="provider-icon">${iconHtml}</span>
                                 ${p.name} ${isBest ? '<span class="best-badge">BEST</span>' : ''}
+                                ${p.offer ? `<span class="offer-badge">${p.offer}</span>` : ''}
                             </div>
                             <div class="provider-details">
                                 <span>${p.rate.toFixed(2)}</span>
@@ -604,7 +602,7 @@
                     </div>
                 `;
             });
-            html += `<button class="btn-primary small" id="gotoNearbyBtn" style="margin-top:20px;"><i class="fas fa-map-pin"></i> View nearby points for ${best.name}</button>`;
+            html += `<button class="btn-primary small" id="gotoNearbyBtn" style="margin-top:16px;"><i class="fas fa-map-pin"></i> View nearby points for ${best.name}</button>`;
             homeResults.innerHTML = html;
 
             document.getElementById('gotoNearbyBtn')?.addEventListener('click', () => {
